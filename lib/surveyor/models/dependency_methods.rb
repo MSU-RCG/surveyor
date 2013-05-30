@@ -5,6 +5,7 @@ module Surveyor
         # Associations
         base.send :belongs_to, :question
         base.send :belongs_to, :question_group
+        base.send :belongs_to, :survey_section
         base.send :has_many, :dependency_conditions, :dependent => :destroy
         
         @@validations_already_included ||= nil

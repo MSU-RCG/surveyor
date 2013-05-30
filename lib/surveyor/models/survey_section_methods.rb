@@ -4,6 +4,7 @@ module Surveyor
       def self.included(base)
         # Associations
         base.send :has_many, :questions, :dependent => :destroy
+        base.send :has_one, :dependency, :dependent => :destroy
         base.send :belongs_to, :survey
 
         # Scopes
